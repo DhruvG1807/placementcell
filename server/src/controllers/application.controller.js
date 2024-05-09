@@ -56,6 +56,7 @@ const createApplication = asyncHandler(async (req, res) => {
   }
 
   const resumeUrl = response.url;
+  // console.log(resumeUrl);
 
   const application = await Application.create({
     student: studentId,

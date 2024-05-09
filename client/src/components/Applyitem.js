@@ -45,7 +45,7 @@ export default function Applyitem(props) {
               </div>
 
               <span className="text-muted d-block fs-5">
-                <i className="fa fa-map-marker" aria-hidden="true"></i>{" "}
+                {/* <i className="fa fa-map-marker" aria-hidden="true"></i>{" "} */}
                 {props.post}
               </span>
             </div>
@@ -53,11 +53,11 @@ export default function Applyitem(props) {
             <div className="d-flex align-items-center">
               <div className="icon3">
                 {" "}
-                <i className="bx bxl-mailchimp"></i>{" "}
+                {/* <i className="bx bxl-mailchimp"></i>{" "} */}
               </div>
 
               <span className="text-muted d-block fs-5">
-                <i className="fa fa-map-marker" aria-hidden="true"></i>{" "}
+                {/* <i className="fa fa-map-marker" aria-hidden="true"></i>{" "} */}
                 {props.ctc}
               </span>
             </div>
