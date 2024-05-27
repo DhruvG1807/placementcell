@@ -1,7 +1,6 @@
 import "./login.css"
 import React, { useRef } from 'react'
 import Anavbar from './Anavbar'
-import Asidebar from "./Asidebar"
 import './Addstudent.css';
 
 export default function Addstudent() {

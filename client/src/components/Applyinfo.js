@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Snavbar from './Snavbar';
 import './Applyinfo.css';
+
 export default function Applyinfo(props) {
   const { companyId } = useParams();
   const [company, setCompany] = useState({});

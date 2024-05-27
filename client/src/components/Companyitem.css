@@ -24,7 +24,7 @@
 .icon2{
     width: 20px;
     height: 20px;
-    background-image: url("../../location.png");
+    background-image: url("../assets/location.png");
     background-size: contain; /* Fit the background image within the container */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image within the container */
@@ -34,7 +34,7 @@
 .icon3{
     width: 20px;
     height: 20px;
-    background-image: url("../../rupees.png");
+    background-image: url("../assets/rupees.png");
     background-size: contain; /* Fit the background image within the container */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image within the container */

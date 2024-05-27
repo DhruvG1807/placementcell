@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Snavbar from './Snavbar';
 
 export default function Applicationitem(props) {
-    // const { companyId } = useParams();
   const [company, setCompany] = useState({});
 
   useEffect(() => {

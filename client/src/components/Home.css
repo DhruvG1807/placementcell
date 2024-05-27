@@ -811,7 +811,7 @@ header:before, header:after{
 header:before{
     height:60%;
     bottom:-1rem;
-    background-image:url("1.jpg");
+    background-image:url("../assets/1.jpg");
     opacity:0.03;
 }
 
@@ -927,7 +927,7 @@ header section:last-child article em{
 }
 
 .jiitmainimg {
-  background-image: url("jiitmain2.png");
+  background-image: url("../assets/jiitmain2.png");
   background-repeat: no-repeat;
   background-size: contain; /* Make the background image responsive */
   width: 500px !important; 

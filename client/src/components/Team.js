@@ -2,6 +2,7 @@ import React from 'react'
 import './Team.css'
 import Navbar from './Navbar'
 import Footer from './footer'
+
 export default function Team() {
   return (
     <div>
@@ -21,7 +22,7 @@ export default function Team() {
           CSE
         </p>
         </div>
-        <img id="one" className="team-member-image" src={require("./hrithik.jpeg")}/>
+        <img id="one" className="team-member-image" src={require("../assets/hrithik.jpeg")}/>
         <div>
         <a href="https://www.facebook.com" target="_blank">
           <img className="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"/>
@@ -41,7 +42,7 @@ export default function Team() {
         <p className="text-blk position">
           CSE
         </p>
-        <img className="team-member-image" src={require("./dhruv.jpeg")}/>
+        <img className="team-member-image" src={require("../assets/dhruv.jpeg")}/>
         <div>
         <a href="https://www.facebook.com" target="_blank">
           <img className="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"/>
@@ -61,7 +62,7 @@ export default function Team() {
         <p className="text-blk position">
           CSE
         </p>
-        <img className="team-member-image" src={require("./kushagra.jpeg")}/>
+        <img className="team-member-image" src={require("../assets/kushagra.jpeg")}/>
         <div>
         <a href="https://www.facebook.com" target="_blank">
           <img className="social-media-icon" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg"/>
