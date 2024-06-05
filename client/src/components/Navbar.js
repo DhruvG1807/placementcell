@@ -48,7 +48,7 @@ export default function Navbar() {
                 <li
                   className={`nav-item `}
                 >
-                  <Link className="nav-link" to="/login">
+                  <Link className="nav-link" to="/slogin">
                     T&P Portal
                   </Link>
                 </li>
