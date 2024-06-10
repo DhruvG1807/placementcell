@@ -12,7 +12,7 @@ export default function Applyinfo(props) {
 
     const fetchCompany = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/students/job/${companyId}`, {
+        const response = await fetch(`https://placementcell-ql79.onrender.com/api/students/job/${companyId}`, {
           method: "GET",
           credentials: 'include',
           headers: {
@@ -49,7 +49,7 @@ export default function Applyinfo(props) {
       formData.append('jobId', companyId);
       formData.append('resume', document.getElementById('inputGroupFile02').files[0]);
       console.log(document.getElementById('inputGroupFile02').files[0]);
-      const response = await fetch(`http://localhost:8000/api/applications`, {
+      const response = await fetch(`https://placementcell-ql79.onrender.com/api/applications`, {
         method: "POST",
         credentials: 'include',
         body: formData

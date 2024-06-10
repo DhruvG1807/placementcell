@@ -7,7 +7,7 @@ export default function Snavbar() {
   const handleClick = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/students/logout`,
+        `https://placementcell-ql79.onrender.com/api/students/logout`,
         {
           method: "DELETE",
           credentials: "include",

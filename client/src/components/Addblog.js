@@ -16,7 +16,7 @@ export default function Addblog() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/blogs", {
+      const response = await fetch("https://placementcell-ql79.onrender.com/api/blogs", {
         method: "POST",
         credentials: "include",
         headers: {

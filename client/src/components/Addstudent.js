@@ -22,7 +22,7 @@ export default function Addstudent() {
     console.log(studentData);
 
     try {
-      const response = await fetch('http://localhost:8000/api/students/register', {
+      const response = await fetch('https://placementcell-ql79.onrender.com/api/students/register', {
         method: 'POST',
         credentials: 'include',
         headers: {

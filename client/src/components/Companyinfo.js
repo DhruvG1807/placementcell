@@ -12,7 +12,7 @@ export default function Companyinfo(props) {
     const fetchCompany = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/admin/job/${companyId}`,
+          `https://placementcell-ql79.onrender.com/api/admin/job/${companyId}`,
           {
             method: "GET",
             credentials: "include",

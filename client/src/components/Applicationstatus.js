@@ -9,7 +9,7 @@ export default function Applicationstatus() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/students/applications', {
+        const response = await fetch('https://placementcell-ql79.onrender.com/api/students/applications', {
           method: "GET",
           credentials: 'include',
           headers: {

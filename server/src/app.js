@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://placementcell-client-4a9lilj89-dhruvg1807s-projects.vercel.app/',
     credentials: true,
 };
 

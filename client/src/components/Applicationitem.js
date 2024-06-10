@@ -9,7 +9,7 @@ export default function Applicationitem(props) {
     const fetchCompany = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/students/job/${props.job}`,
+          `https://placementcell-ql79.onrender.com/api/students/job/${props.job}`,
           {
             method: "GET",
             credentials: "include",

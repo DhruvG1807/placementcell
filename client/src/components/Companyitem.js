@@ -7,7 +7,7 @@ import { FaTrash } from "react-icons/fa";
 export default function Companyitem(props) {
   const deleteArticle = async () => {
     const response = await fetch(
-      `http://localhost:8000/api/admin/job/${props.id}`,
+      `https://placementcell-ql79.onrender.com/api/admin/job/${props.id}`,
       {
         method: "PUT",
         credentials: "include",
@@ -24,7 +24,7 @@ export default function Companyitem(props) {
 
   const generateReport = async () => {
     const response = await fetch(
-      `http://localhost:8000/api/admin/job/report/${props.id}`,
+      `https://placementcell-ql79.onrender.com/api/admin/job/report/${props.id}`,
       {
         method: "GET",
         credentials: "include",

@@ -11,7 +11,7 @@ export default function Addcompany() {
     const formData = new FormData(formRef.current);
 
     try {
-      const response = await fetch("http://localhost:8000/api/admin/job", {
+      const response = await fetch("https://placementcell-ql79.onrender.com/api/admin/job", {
         method: "POST",
         credentials: "include",
         body: formData,

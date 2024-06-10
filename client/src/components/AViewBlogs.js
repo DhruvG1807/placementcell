@@ -7,7 +7,7 @@ export default function AViewBlogs() {
   const [searchCompany, setSearchCompany] = useState('');
   const fetchBlogs = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/blogs', {
+      const response = await fetch('https://placementcell-ql79.onrender.com/api/blogs', {
         method: "GET",
         credentials: 'include',
         headers: {
@@ -39,7 +39,7 @@ export default function AViewBlogs() {
       fetchBlogs();
       return;
     }
-    fetch(`http://localhost:8000/api/blogs/company/${companyName}`)
+    fetch(`https://placementcell-ql79.onrender.com/api/blogs/company/${companyName}`)
       .then(response => response.json())
       .then((data) => {
         console.log(data);

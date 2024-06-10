@@ -8,7 +8,7 @@ export default function Ahome() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/admin/job', {
+        const response = await fetch('https://placementcell-ql79.onrender.com/api/admin/job', {
           method: "GET",
           credentials: 'include',
           headers: {
