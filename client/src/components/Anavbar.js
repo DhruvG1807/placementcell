@@ -2,15 +2,16 @@ import React from "react";
 import "./login.css";
 import "./Anavbar.css";
 import { Link, useLocation } from "react-router-dom";
+import { getAccessToken } from "../getAccessToken";
 
 export default function Anavbar() {
   const handleClick = async () => {
     try {
       const response = await fetch(`https://placementcell-ql79.onrender.com/api/admin/logout`, {
         method: "DELETE",
-        credentials: "include",
         header: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${getAccessToken()}`,
         },
       });
       const json = await response.json();

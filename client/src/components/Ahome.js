@@ -2,17 +2,21 @@ import React, { useEffect, useState } from 'react'
 import Anavbar from './Anavbar'
 import Companyitem from './Companyitem'
 import './login.css'
+import { getAccessToken } from '../getAccessToken'
+
 export default function Ahome() {
   const [articles, setArticles] = useState([]);
-
+  
   useEffect(() => {
     const fetchJobs = async () => {
       try {
+        const accessToken = getAccessToken();
+        console.log(accessToken);
         const response = await fetch('https://placementcell-ql79.onrender.com/api/admin/job', {
           method: "GET",
-          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${accessToken}`,
           }
         });
         const json = await response.json();

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Anavbar from "./Anavbar";
 import { useParams } from "react-router-dom";
 import "./Companyinfo.css";
+import { getAccessToken } from "../getAccessToken";
 
 export default function Companyinfo(props) {
   const { companyId } = useParams();
@@ -15,9 +16,9 @@ export default function Companyinfo(props) {
           `https://placementcell-ql79.onrender.com/api/admin/job/${companyId}`,
           {
             method: "GET",
-            credentials: "include",
-            header: {
+            headers: {
               "Content-Type": "application/json",
+              "Authorization": `Bearer ${getAccessToken()}`,
             },
           }
         );

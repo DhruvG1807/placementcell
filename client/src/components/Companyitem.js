@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import "./Companyitem.css";
 import { FaTrash } from "react-icons/fa";
+import { getAccessToken } from "../getAccessToken";
 
 export default function Companyitem(props) {
   const deleteArticle = async () => {
@@ -10,9 +11,9 @@ export default function Companyitem(props) {
       `https://placementcell-ql79.onrender.com/api/admin/job/${props.id}`,
       {
         method: "PUT",
-        credentials: "include",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
         },
       }
     );
@@ -27,9 +28,9 @@ export default function Companyitem(props) {
       `https://placementcell-ql79.onrender.com/api/admin/job/report/${props.id}`,
       {
         method: "GET",
-        credentials: "include",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
         },
       }
     );

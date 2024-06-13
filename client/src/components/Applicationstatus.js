@@ -2,6 +2,8 @@ import React,{useState,useEffect} from 'react'
 import Snavbar from './Snavbar';
 import Applicationitem from './Applicationitem';
 import './Applicationstatus.css';
+import { getAccessToken } from '../getAccessToken';
+
 
 export default function Applicationstatus() {
     const [articles, setArticles] = useState([]);
@@ -11,9 +13,9 @@ export default function Applicationstatus() {
       try {
         const response = await fetch('https://placementcell-ql79.onrender.com/api/students/applications', {
           method: "GET",
-          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
           }
         });
         const json = await response.json();

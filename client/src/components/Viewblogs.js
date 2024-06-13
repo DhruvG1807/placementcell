@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Blogitem from './Blogitem';
 import Anavbar from './Anavbar';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Viewblogs() {
   const [blogs, setBlogs] = useState([]);
@@ -9,9 +10,9 @@ export default function Viewblogs() {
     try {
       const response = await fetch('https://placementcell-ql79.onrender.com/api/blogs', {
         method: "GET",
-        credentials: 'include',
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${getAccessToken()}`,
         }
       });
       const json = await response.json();

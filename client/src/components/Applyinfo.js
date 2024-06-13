@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Snavbar from './Snavbar';
 import './Applyinfo.css';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Applyinfo(props) {
   const { companyId } = useParams();
@@ -14,9 +15,9 @@ export default function Applyinfo(props) {
       try {
         const response = await fetch(`https://placementcell-ql79.onrender.com/api/students/job/${companyId}`, {
           method: "GET",
-          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
           }
         });
         const json = await response.json();
@@ -51,8 +52,10 @@ export default function Applyinfo(props) {
       console.log(document.getElementById('inputGroupFile02').files[0]);
       const response = await fetch(`https://placementcell-ql79.onrender.com/api/applications`, {
         method: "POST",
-        credentials: 'include',
-        body: formData
+        body: formData,
+        headers: {
+          "Authorization": `Bearer ${getAccessToken()}`,
+        }
       });
 
       console.log(response);

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import './Applyinfo.css';
 import Snavbar from './Snavbar';
+import { getAccessToken } from '../getAccessToken';
+
 export default function Bloginfo() {
   const { blogId } = useParams();
   const [blog, setBlog] = useState({});
@@ -13,9 +15,9 @@ export default function Bloginfo() {
       try {
         const response = await fetch(`https://placementcell-ql79.onrender.com/api/blogs/${blogId}`, {
           method: "GET",
-          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
           }
         });
         const json = await response.json();

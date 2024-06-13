@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Snavbar from './Snavbar';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Applicationinfo() {
   const { companyId } = useParams();
@@ -14,7 +15,10 @@ export default function Applicationinfo() {
           `https://placementcell-ql79.onrender.com/api/students/job/${companyId}`,
           {
             method: "GET",
-            credentials: "include",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${getAccessToken()}`,
+            },
 
           }
         );

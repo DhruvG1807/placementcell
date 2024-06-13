@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 import './Addblog.css';
 import Anavbar from './Anavbar';
+import { getAccessToken } from '../getAccessToken';
+
 export default function Addblog() {
   const formRef = useRef();
 
@@ -16,11 +18,12 @@ export default function Addblog() {
     }
 
     try {
+      const accessToken = getAccessToken();
       const response = await fetch("https://placementcell-ql79.onrender.com/api/blogs", {
         method: "POST",
-        credentials: "include",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${accessToken}`,
         },
         body: JSON.stringify(data)
       });

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./login.css";
 import Anavbar from "./Anavbar";
 import "./Addcompany.css";
+import { getAccessToken } from "../getAccessToken";
 
 export default function Addcompany() {
   const formRef = useRef();
@@ -11,9 +12,12 @@ export default function Addcompany() {
     const formData = new FormData(formRef.current);
 
     try {
+      const accessToken = getAccessToken();
       const response = await fetch("https://placementcell-ql79.onrender.com/api/admin/job", {
         method: "POST",
-        credentials: "include",
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
         body: formData,
       });
 

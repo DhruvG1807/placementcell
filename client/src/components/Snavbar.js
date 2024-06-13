@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './login.css'
+import { getAccessToken } from '../getAccessToken'
 
 export default function Snavbar() {
 
@@ -10,9 +11,9 @@ export default function Snavbar() {
         `https://placementcell-ql79.onrender.com/api/students/logout`,
         {
           method: "DELETE",
-          credentials: "include",
           header: {
             "Content-Type": "application/json",
+            "Authorization": `Bearer ${getAccessToken()}`,
           },
         }
       );

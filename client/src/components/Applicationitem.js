@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { Link } from 'react-router-dom';
 import Snavbar from './Snavbar';
+import { getAccessToken } from '../getAccessToken';
 
 export default function Applicationitem(props) {
   const [company, setCompany] = useState({});
@@ -12,9 +13,9 @@ export default function Applicationitem(props) {
           `https://placementcell-ql79.onrender.com/api/students/job/${props.job}`,
           {
             method: "GET",
-            credentials: "include",
-            header: {
+            headers: {
               "Content-Type": "application/json",
+              "Authorization": `Bearer ${getAccessToken()}`,
             },
           }
         );
