@@ -52,14 +52,14 @@ export default function Navbar() {
                     T&P Portal
                   </Link>
                 </li>
-                /*<li
+                {/*<li
                   className={`nav-item `}
                 >
                   <Link className="nav-link" to="/team">
                     Team
                   </Link>
                 </li>
-                */
+                */}
                 <li
                   className={`nav-item`}
                 >
